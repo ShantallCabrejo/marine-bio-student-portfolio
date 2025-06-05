@@ -1,0 +1,295 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.hero-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+/* ======= HEADER ======= */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px 40px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  z-index: 10;
+}
+
+.logo {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: black;
+  margin-right: auto;
+  font-family: 'Poppins', sans-serif;
+}
+
+header nav a {
+  margin-left: 30px;
+  text-decoration: none;
+  color: black;
+  font-weight: 400;
+  font-size: 1.05rem;
+  transition: color 0.3s ease;
+}
+
+header nav a {
+  position: relative;
+  font-size: 1.3rem;
+}
+
+header nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background-color: #15384c;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+header nav a:hover::after {
+  transform: scaleX(1);
+}
+
+/* ======= HERO SECTION ======= */
+.hero {
+  background-image: url("https://images.rewildingbritain.org.uk/images/kelp-forest-shetland-scotland-c-henley-spiers-nature-picture-library.jpg?auto=format&crop=focalpoint&domain=images.rewildingbritain.org.uk&fit=crop&fp-x=0.5&fp-y=0.5&h=1080&ixlib=php-3.3.1&q=82&usm=20&w=1920");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 0;
+  --overlay-opacity: 0;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: white;
+  opacity: var(--overlay-opacity, 0);
+  pointer-events: none;
+  mix-blend-mode: lighten;
+  z-index: 2;
+}
+
+.hero-content {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 50px 80px;
+  border: 1px solid #ddd;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 3;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 400;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  color: #666;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ======= CONTENT SECTIONS ======= */
+.section {
+  padding: 0;
+  margin: 0;
+}
+
+.section h2 {
+  font-family: 'Poppins', sans-serif;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.section p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.125rem;
+  color: #555;
+  line-height: 1.75;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.split-education {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  padding: 0;
+  position: relative;
+  margin-bottom: 100px;
+}
+
+.education-left {
+  flex: 1;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.education-right {
+  flex: 1;
+  background-color: white;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.profile-pic img {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  border: 4px solid white;
+  object-fit: cover;
+}
+
+.edu-details h3 {
+  font-size: 1.5rem;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+.edu-details p {
+  font-size: 1.1rem;
+  color: #444;
+  margin: 5px 0;
+}
+
+.edu-blurb {
+  margin-top: 15px;
+  background-color: #f5faff;
+  padding: 15px;
+  border-left: 4px solid #15384c;
+  border-radius: 4px;
+}
+
+.section .education-heading {
+  position: absolute;
+  top: 100px;
+  left: 60px;
+  font-size: 3rem;
+  color: black;
+  z-index: 2;
+  font-weight: 600;
+}
+
+.fullscreen-section {
+  height: 100vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.edu-details + .edu-details {
+  margin-top: 50px;
+}
+
+.education-right p {
+  text-align: left;
+}
+
+/* === EXPERIENCE SECTION === */
+.experience-section {
+  background-color: white;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 200px; /* space for top headings */
+}
+
+/* Top headings container */
+.experience-headings {
+  width: 100%;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 60px;
+  z-index: 2;
+}
+
+/* Left and right headings */
+.experience-heading-left,
+.experience-heading-right {
+  font-size: 3rem;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  color: black;
+  margin: 0;
+}
+
+/* Center image */
+.experience-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.experience-image img {
+  width: 300px;
+  max-width: 80vw;
+  height: auto;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 0;
+}
+
+/* === Responsive stack on mobile === */
+@media (max-width: 768px) {
+  .experience-headings {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .experience-heading-left,
+  .experience-heading-right {
+    font-size: 2.2rem;
+  }
+
+  .experience-section {
+    padding-top: 180px;
+  }
+}
