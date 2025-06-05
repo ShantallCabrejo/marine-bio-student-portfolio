@@ -9,7 +9,7 @@ This is a responsive HTML/CSS portfolio website built for Mikayla Long, a Marine
 - Smooth scrolling effects
 
 ## 🌐 Live Demo
-[Click here to view the live site](https://ShantallCabrejo.github.io/marine-bio-student-portfolio/)
+[Click here to view the live site](https://shantallcabrejo.github.io/marine-bio-student-portfolio/)
 
 ## 💼 Purpose
 This project demonstrates my front-end development skills and ability to build clean, accessible, and professional portfolio websites. It can be adapted for any student or professional profile.
